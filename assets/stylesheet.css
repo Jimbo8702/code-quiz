@@ -3,11 +3,54 @@
 }
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
+  height: 50px;
+  background-color: purple;
+  border-bottom: solid black 3px;
+}
+header h1 {
+  font-size: 50px;
+}
+#timerBox {
+  font-size: 50px;
 }
 body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  height: 80vh;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#questionContainer {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.answers {
+  padding: 5px;
+}
+#buttonList {
+  align-content: center;
+  padding: 5px;
+}
+#StartButton {
+  margin: 10px;
+  height: 50px;
+  width: 60px;
+}
+#buttonList li {
+  padding: 5px;
+}
+#questionContainer h1 {
+  padding: 5px;
+  font-size: 18px;
 }
