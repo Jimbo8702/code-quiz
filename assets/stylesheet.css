@@ -1,6 +1,3 @@
-* {
-  border: solid 1px black;
-}
 header {
   display: flex;
   justify-content: space-between;
@@ -30,10 +27,12 @@ main {
 }
 #questionContainer {
   width: 600px;
-  height: 500px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 5px solid purple;
+  margin: 50px;
 }
 .answers {
   padding: 5px;
@@ -45,7 +44,9 @@ main {
 #StartButton {
   margin: 10px;
   height: 50px;
-  width: 60px;
+  width: 150px;
+  margin-top: 50px;
+  font-size: 40px;
 }
 #buttonList li {
   padding: 5px;
