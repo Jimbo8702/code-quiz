@@ -17,6 +17,7 @@ var questionOne = {
   answer2: "2",
   answer3: "3",
   answer4: "4",
+  correct: "2",
 };
 var questionTwo = {
   Question: "",
@@ -24,6 +25,7 @@ var questionTwo = {
   answer2: "",
   answer3: "",
   answer4: "",
+  correct: "",
 };
 var questionThree = {
   Question: "",
@@ -31,6 +33,7 @@ var questionThree = {
   answer2: "",
   answer3: "",
   answer4: "",
+  correct: "",
 };
 var questionFour = {
   Question: "",
@@ -38,6 +41,7 @@ var questionFour = {
   answer2: "",
   answer3: "",
   answer4: "",
+  correct: "",
 };
 var questionFive = {
   Question: "",
@@ -45,6 +49,7 @@ var questionFive = {
   answer2: "",
   answer3: "",
   answer4: "",
+  correct: "",
 };
 const questionList = [
   questionOne,
@@ -58,11 +63,10 @@ function startGame() {
   totalTime();
   presentNextQuestion();
   startButton.disabled = true;
-  }
   //starts count down
   //first question appears
 }
-function checkCorrect() {
+function checkCorrect(event, i) {
   //check if selected answer matches desired
   //if not correct, take 5 seconds off time
 }
