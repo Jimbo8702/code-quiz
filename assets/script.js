@@ -12,11 +12,11 @@ var score;
 var highscore;
 const answerLetter = ["A", "B", "C", "D"];
 var questionOne = {
-  Question: "",
-  answer1: "",
-  answer2: "",
-  answer3: "",
-  answer4: "",
+  Question: "select 2",
+  answer1: "1",
+  answer2: "2",
+  answer3: "3",
+  answer4: "4",
 };
 var questionTwo = {
   Question: "",
@@ -55,6 +55,10 @@ const questionList = [
 ];
 //FUNCTIONS
 function startGame() {
+  totalTime();
+  presentNextQuestion();
+  startButton.disabled = true;
+  }
   //starts count down
   //first question appears
 }
@@ -66,15 +70,30 @@ function setHighScore() {
   //take the score and store it to local storage
   //present it on a highscore list
 }
-function presentNextQuestion() {
+function presentNextQuestion(i) {
+  console.log(questionList[i].Question);
+  question.textContent = questionList[i].Question;
+  answerOne.textContent = questionList[i].answer1;
+  answerTwo.textContent = questionList[i].answer2;
+  answerThree.textContent = questionList[i].answer3;
+  answerFour.textContent = questionList[i].answer4;
   //grab a question
   //present on page
   //select in order from array
   //start at index 0 and add 1 everytime correct
 }
 function totalTime() {
-  //sets the timer to 30s
-  //count down and at 0 present quiz over
+  var timerInterval = setInterval(function () {
+    time--;
+    timerBox.textContent = time;
+
+    if (time === 0) {
+      clearInterval(timerInterval);
+      time = 0;
+      timerBox.textContent = time;
+      quizOver();
+    }
+  }, 1000);
 }
 function quizOver() {
   //if time runs out display game over
