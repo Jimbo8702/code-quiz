@@ -55,3 +55,7 @@ main {
   padding: 5px;
   font-size: 18px;
 }
+.answers {
+  width: 50%;
+  height: 30px;
+}
