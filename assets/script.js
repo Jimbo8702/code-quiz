@@ -6,7 +6,7 @@ var answerFour = document.getElementById("answers4");
 var question = document.getElementById("Question");
 var timer = document.getElementById("timerBox");
 var startButton = document.getElementById("StartButton");
-var showOrhide = document.querySelector("answers");
+var buttonList = document.getElementById("buttonList");
 
 //DATA
 var index = 0;
@@ -63,6 +63,7 @@ const questionList = [
 ];
 //FUNCTIONS
 function startGame() {
+  buttonList.setAttribute("style", "visibility: visible");
   totalTime();
   presentNextQuestion(index);
   startButton.disabled = true;
@@ -114,11 +115,12 @@ function totalTime() {
 }
 function quizOver() {
   question.textContent = "Quiz over";
-  showOrhide.style.display = "none";
+  buttonList.setAttribute("style", "visibility: hidden");
 
   //if time runs out display game over
   //when the timer hits 0 game is over
 }
+
 //USER INITILIZATION
 startButton.addEventListener("click", startGame);
 answerOne.addEventListener("click", checkCorrect);
