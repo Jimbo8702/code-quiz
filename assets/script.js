@@ -114,11 +114,21 @@ function totalTime() {
   }, 1000);
 }
 function quizOver() {
-  question.textContent = "Quiz over";
+  question.textContent = "Please enter your initals";
   buttonList.setAttribute("style", "visibility: hidden");
+  renderInitials();
 
   //if time runs out display game over
   //when the timer hits 0 game is over
+}
+function renderInitials() {
+  var newEl = document.createElement("form");
+  var newEl2 = document.createElement("input");
+  newEl2.setAttribute("id", "formInput");
+  newEl.appendChild(newEl2);
+  question.appendChild(newEl);
+  var store = document.getElementById("formInput");
+  store.addEventListener("submit", console.log("its working"));
 }
 
 //USER INITILIZATION
